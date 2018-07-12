@@ -1,0 +1,32 @@
+{
+  "name": "netatmo-wunderground-agent",
+  "version": "1.0.0",
+  "description": "Connects Netatmo data to a Weather Underground PWS station",
+  "main": "server.js",
+  "dependencies": {
+    "netatmo-wunderground-pws": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brbeaird/netatmo-wunderground-pws.git"
+  },
+  "keywords": [
+    "netatmo",
+    "wunderground",
+    "weather",
+    "pws",
+    "underground",
+    "nodejs",
+    "node"
+  ],
+  "author": "Brian Beaird",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brbeaird/netatmo-wunderground-pws/issues"
+  },
+  "homepage": "https://github.com/brbeaird/netatmo-wunderground-pws#readme"
+}
