@@ -26,3 +26,5 @@ I recommend using pm2 to run the agent in the background and automatically resta
 3. `pm2 start ecosystem.config.js`
 4. This will automatically spin up an instance of the agent handled by pm2.
 5. For more info on pm2 commands, check out http://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/
+
+Docker: https://hub.docker.com/repository/docker/brbeaird/netatmo-wunderground-agent
