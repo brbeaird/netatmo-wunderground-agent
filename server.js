@@ -1,4 +1,16 @@
 var netatmoWunderground = require('netatmo-wunderground-pws')
+const express = require("express");
+const app = express();
+app.get("/health", (req, res) => {
+  let clientData = netatmoWundergroundUploader.getClientDetails();
+  if (clientData.accessToken){
+    res.send({ success: true, message: "It is working" });
+  }
+  else{
+    res.send({ success: false, message: "Auth failure" });
+  }
+
+});
 
 //Set auth vars
 var authInfo = {
@@ -19,4 +31,9 @@ netatmoWundergroundUploader.getNetatmoData();
 //Refresh and upload data every 2.5 minutes
 setInterval(function() {
     netatmoWundergroundUploader.getNetatmoData();
-  }, 60 * 2.5 * 1000);
+  }, 60 * 1 * 1000);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on PORT ${PORT}`);
+});
