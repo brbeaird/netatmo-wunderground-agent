@@ -2,6 +2,14 @@
 
 This project will integrate Netatmo data with a Weather Underground station.
 
+### Authentication
+Netatmo uses an OAuth flow with access and refresh tokens, which expire after some time. You will need to generate these and add them as environment variables for startup. The Docker container will keep up with rotating them going forward, storing them in a file under /temp. If you want the config to persist across docker container recreation, map the /temp folder.
+
+Follow these steps to generate the tokens:
+1. Login to https://dev.netatmo.com/apps and create an app
+2. Click on the app and scroll down to the Token Generator field
+3. In the Scopes drop-down, choose "read_station" and click "Generate Token." Follow the prompts, and you should end up with Access Token and Refresh Token values.
+
 ### Installation
 
 1. Install nodejs
