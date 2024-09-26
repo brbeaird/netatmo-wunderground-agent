@@ -4,7 +4,7 @@
   "description": "Connects Netatmo data to a Weather Underground PWS station",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "netatmo-wunderground-pws": "^1.1.2"
   },
   "scripts": {
